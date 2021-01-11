@@ -19,7 +19,7 @@ import org.springframework.security.oauth2.client.userinfo.CustomUserTypesOAuth2
 @EnableWebSecurity // Spring Security 설정들을 활성화 시켜줍니다.
 public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
-    private final CustomUserTypesOAuth2UserService customUserTypesOAuth2UserService;
+    private final CustomOAuth2UserService customOAuth2UserService;
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
@@ -36,7 +36,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                     .oauth2Login()
                         .userInfoEndpoint()
-                            .userService(customUserTypesOAuth2UserService);
+                            .userService(customOAuth2UserService);
     }
 
 }
