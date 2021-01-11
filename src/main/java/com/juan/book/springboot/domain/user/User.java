@@ -2,6 +2,7 @@ package com.juan.book.springboot.domain.user;
 
 import com.juan.book.springboot.domain.BaseTimeEntity;
 import lombok.Builder;
+import lombok.Getter;
 
 import javax.persistence.*;
 
@@ -12,6 +13,7 @@ import javax.persistence.*;
  * Blog : https://blog.naver.com/gkswndks123
  * Github : https://github.com/gatsjy
  */
+@Getter
 public class User extends BaseTimeEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
